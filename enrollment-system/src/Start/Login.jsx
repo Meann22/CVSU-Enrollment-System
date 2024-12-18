@@ -21,6 +21,10 @@ const Login = ({ setUser }) => {
   const [showRetypePassword, setShowRetypePassword] = useState(false);
 
   const navigate = useNavigate();
+  
+  const handleForgotPassword = () => {
+    navigate('/forgot-password');
+  };
 
   const images = [
     img1,
@@ -394,6 +398,15 @@ const Login = ({ setUser }) => {
                   ? 'Log In'
                   : "Sign Up"}
               </button>
+
+              <div className="mt-2">
+                <button
+                  onClick={handleForgotPassword}
+                  className="text-indigo-600 hover:text-indigo-800 font-semibold"
+                >
+                  Forgot Password?
+                </button>
+              </div>
             </div>
           </div>
         </div>
